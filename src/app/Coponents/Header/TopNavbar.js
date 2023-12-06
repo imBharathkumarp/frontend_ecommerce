@@ -36,8 +36,7 @@ function TopNavbar() {
                       {c}
                     </Link>
 
-                    <Link to="/login">Login</Link>
-                    <Link to="/signup">Signup</Link>
+                   
                     </div>
                   );
                 })}
@@ -47,6 +46,12 @@ function TopNavbar() {
             </NavLink>
             <NavLink to={"/contact"} className="nav-link">
               Contact
+            </NavLink>
+            <NavLink to={"/login"} className="nav-link">
+              Login
+            </NavLink>
+            <NavLink to={"/signup"} className="nav-link">
+              SignUp
             </NavLink>
           </Nav>
         </Navbar.Collapse>

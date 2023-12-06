@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-import TopNavbar from "../../../Coponents/Header/TopNavbar";
 import "./ProductDetails.css";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -48,7 +47,7 @@ function SingleProductDetails() {
 
   return (
     <Fragment>
-      <TopNavbar />
+      
       <Container>
         {product && (
           <Row className="my-5">

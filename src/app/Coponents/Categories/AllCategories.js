@@ -7,7 +7,7 @@ function AllCategories() {
   const { categories } = useSelector((state) => state.categories);
   return (
     <Container className="my-3 py-3">
-      <h3 className="text-center mb-4">Browse Catrgories</h3>
+      <h3 className="text-center mb-4">Browse Categories</h3>
       <Row>
         {categories &&
           categories.map((c, index) => {

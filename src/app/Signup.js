@@ -1,7 +1,7 @@
 // client-> src -> components -> signup.js
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import './Signup.css'; // Import the CSS file
 
 function Signup({ setIsLogin, setLoginResult }) {
   const [fname, setFname] = useState("");
