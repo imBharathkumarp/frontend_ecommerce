@@ -8,7 +8,7 @@ function Footer() {
       <div className="text-center bg-dark text-white py-2 fixed-bottom">
         <span>
           Copyright & Developed by{" "}
-          <a href="https://www.linkedin.com/in/almamunhossain/" target="blank">
+          <a href="https://www.linkedin.com/in/imbharathkumarp/" target="blank">
             FATAFAT
           </a>
         </span>
