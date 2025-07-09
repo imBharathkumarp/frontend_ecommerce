@@ -9,12 +9,12 @@ function HeaderSlider() {
           <img
             className="d-block w-100"
             style={{ height: "100vh", objectFit: "cover" }}
-            src="../img/slider/pure-pu-ladies-shoulder-bag.png"
-            alt="pure pu ladies bag"
+            src="../img/slider/FATAFAT.png"
+            alt="DEAL is LIVE NOW"
           />
           <Carousel.Caption className="bg-white">
-            <h5>Summer Collection for Ladies Shoulder Bag </h5>
-            <p>FATAFAT SUMMER COLLECTION</p>
+            <h5>DEAL IS LIVE NOW </h5>
+            <p></p>
             <div className="mb-3">
               <Button variant="dark">Shop Now</Button>
             </div>
