@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CategoryProducts from "./app/Pages/Products/CategoryProducts";
 import Contact from "./app/Pages/Contact";
@@ -11,10 +11,36 @@ import TopNavbar from "./app/Coponents/Header/TopNavbar";
 import Login from "./app/Login";
 import Signup from "./app/Signup";
 function App() {
+
+  const [darkMode , setDarkMode] = useState(false)
+
+  // Load saved theme on mount 
+  useEffect(() => {
+    const savedMode = localStorage.getItem("theme")
+    if(savedMode === 'dark'){
+      setDarkMode(true)
+      document.documentElement.classList.add('dark')
+    }
+  } ,[])
+
+  // Toggle theme 
+  const toggleMode = () => {
+    setDarkMode((prev) => !prev);
+    if(!darkMode){
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    }else{
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }
+
   return (
     <Fragment>
+
       <div>
-        <TopNavbar/>
+
+        <TopNavbar darkMode={darkMode} toggleMode={toggleMode} />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

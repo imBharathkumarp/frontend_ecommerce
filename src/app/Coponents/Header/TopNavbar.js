@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { fetchAllCategories } from "../../Features/Category/CategorySlice";
 
-function TopNavbar() {
+function TopNavbar({ darkMode, toggleMode }) {
   const { categories } = useSelector((state) => state.categories);
   let dispatch = useDispatch();
   useEffect(() => {
@@ -12,7 +12,7 @@ function TopNavbar() {
   }, [dispatch]);
 
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar   bg={darkMode ? "dark" : "light"} variant={darkMode ? "dark" : "light"} expand="lg"  >
       <Container>
         <NavLink to={"/"} className={"navbar-brand"}>
           Shop Now
@@ -55,6 +55,9 @@ function TopNavbar() {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
+        <button onClick={toggleMode} style={{ marginLeft: '1rem' }}>
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
       </Container>
     </Navbar>
   );
