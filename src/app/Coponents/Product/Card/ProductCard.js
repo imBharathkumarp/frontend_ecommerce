@@ -23,7 +23,7 @@ function ProductCard({ product }) {
             <Card.Text className="text-capitalize text-decoration-none fs-6">
               {product.category}
             </Card.Text>
-            <h5>${product.price}</h5>
+            <h5>₹{product.price}</h5>
             <div className="py-2 d-flex justify-content-center fs-6">
               <ReactStars
                 count={5}
