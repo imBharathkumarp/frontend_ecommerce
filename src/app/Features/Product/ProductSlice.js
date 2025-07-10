@@ -8,12 +8,17 @@ export const getAllProducts = createAsyncThunk(
   async () => {
     try {
       let { data } = await axios.get("https://fakestoreapi.com/products");
-      return data;
+      const roundedData = data.map((product) => ({
+        ...product,
+        price: Math.round(product.price),
+      }));
+      return roundedData;
     } catch (error) {
       return axiosErrorHandler(error);
     }
   }
 );
+
 const productSlice = createSlice({
   name: "products",
   initialState: { isLoading: false, products: [], error: null },
