@@ -4,10 +4,14 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItemCard from "../Coponents/Cart/CartItemCard";
 import Footer from "../Coponents/Footer/Footer";
-import { subTotalPrice, totalPrice, totalTax } from "../Features/Cart/CartSelector";
+import {
+  subTotalPrice,
+  totalPrice,
+  totalTax,
+} from "../Features/Cart/CartSelector";
 import { cartState } from "../Features/Cart/CartSlice";
-import { useAuth0 } from '@auth0/auth0-react'; 
-import axios from 'axios';
+import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 
 function Cart() {
   let state = useSelector((state) => state);
@@ -16,22 +20,20 @@ function Cart() {
   const tax = totalTax(state);
   const totalAmmount = totalPrice(state);
 
-
   const handlePost = () => {
-  
-
-    axios.post('http://localhost:5000/cart', {totalAmmount})
+    axios
+      .post("http://localhost:5000/cart", { totalAmmount })
       .then((response) => {
         const result = response.data;
         if (result) {
           alert("Cart data saved successfully");
-        } 
+        }
       })
       .catch((error) => {
         console.error("POST request error:", error);
         alert("Something went wrong when saving cart data");
       });
-  }
+  };
 
   return (
     <Fragment>
@@ -79,7 +81,8 @@ function Cart() {
                   <div className="w-100 text-center">
                     <button
                       onClick={handlePost}
-                      className="btn btn-primary w-30" >
+                      className="btn btn-primary w-30"
+                    >
                       Post
                     </button>
                   </div>
