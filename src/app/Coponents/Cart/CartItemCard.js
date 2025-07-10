@@ -34,9 +34,10 @@ function CartItemCard({ item }) {
   };
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${item.id}`).then((res) => {
-      setProduct({ ...res.data, quantity: item.quantity });
+      const updatedPrice = Math.round(res.data.price);
+      setProduct({ ...res.data, price: updatedPrice, quantity: item.quantity });
     });
-  }, [item]);
+  }, [item.id, item.quantity]);
   let content = "";
   if (product) {
     return (content = (
@@ -68,7 +69,7 @@ function CartItemCard({ item }) {
             </div>
             <div className="w-100 text-center">
               <span className="fs-5">
-                $
+                ₹
                 {product.price
                   ? (product.price * product.quantity).toFixed(2)
                   : ""}
