@@ -73,7 +73,7 @@ function Cart() {
                   </div>
                   <div className="w-100 align-middle">
                     <h5 className="align-middle d-inline">
-                      Total Price: ₹{totalAmmount.toFixed(2)}
+                      Total Price: ₹{Math.round(totalAmmount)}
                     </h5>
                   </div>
                   <div className="w-100 text-center">
