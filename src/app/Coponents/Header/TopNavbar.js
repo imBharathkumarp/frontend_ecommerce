@@ -55,8 +55,8 @@ function TopNavbar({ darkMode, toggleMode }) {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
-        <button onClick={toggleMode} style={{ marginLeft: '1rem' }}>
-          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        <button className="mode" onClick={toggleMode} style={{ marginLeft: '1rem' }}>
+          {darkMode ? '☀️' : '🌙'}
         </button>
       </Container>
     </Navbar>
