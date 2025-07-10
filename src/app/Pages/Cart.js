@@ -4,9 +4,13 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItemCard from "../Coponents/Cart/CartItemCard";
 import Footer from "../Coponents/Footer/Footer";
-import { subTotalPrice, totalPrice, totalTax } from "../Features/Cart/CartSelector";
+import {
+  subTotalPrice,
+  totalPrice,
+  totalTax,
+} from "../Features/Cart/CartSelector";
 import { cartState } from "../Features/Cart/CartSlice";
-import axios from 'axios';
+import axios from "axios";
 
 function Cart() {
   let state = useSelector((state) => state);
@@ -16,7 +20,8 @@ function Cart() {
   const totalAmmount = totalPrice(state);
 
   const handlePost = () => {
-    axios.post('http://localhost:5000/register', { subTotal, tax, totalAmmount })
+    axios
+      .post("http://localhost:5000/register", { subTotal, tax, totalAmmount })
       .then((response) => {
         const result = response.data;
         if (result) {
@@ -27,7 +32,7 @@ function Cart() {
         console.error("POST request error:", error);
         alert("Something went wrong when saving data.");
       });
-  }
+  };
 
   return (
     <Fragment>
@@ -38,8 +43,7 @@ function Cart() {
               <h3>
                 You don't have any product in carts.{" "}
                 <Link to="/products" className="text-dark text-decoration-none">
-                  {" "}
-                  Go for shopping{" "}
+                  Go for shopping
                 </Link>
               </h3>
             </div>
@@ -61,21 +65,21 @@ function Cart() {
                 <div className="d-flex justify-content-around">
                   <div className="w-100 align-middle">
                     <h5 className="align-middle d-inline">
-                      Subtotal: ${subTotal}
+                      Subtotal: ₹{subTotal}
                     </h5>
                   </div>
                   <div className="w-100 ">
-                    <h5 className="align-middle d-inline">Tax(2%): ${tax}</h5>
+                    <h5 className="align-middle d-inline">Tax(2%): ₹{tax}</h5>
                   </div>
                   <div className="w-100 align-middle">
                     <h5 className="align-middle d-inline">
-                      Total Price: ${totalAmmount.toFixed(2)}
+                      Total Price: ₹{totalAmmount.toFixed(2)}
                     </h5>
                   </div>
                   <div className="w-100 text-center">
                     <button
                       onClick={handlePost}
-                      className="btn btn-primary w-30" 
+                      className="btn btn-primary w-30"
                     >
                       Post
                     </button>
