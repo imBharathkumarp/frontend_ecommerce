@@ -34,10 +34,9 @@ function CartItemCard({ item }) {
   };
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${item.id}`).then((res) => {
-      const updatedPrice = Math.round(res.data.price);
-      setProduct({ ...res.data, price: updatedPrice, quantity: item.quantity });
+      setProduct({ ...res.data, quantity: item.quantity });
     });
-  }, [item.id, item.quantity]);
+  }, [item]);
   let content = "";
   if (product) {
     return (content = (
