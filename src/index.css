@@ -20,14 +20,7 @@ body {
   color: #fff;
 }
 
-.dark body h1{  
-  color: #290202;
-}
-
-.dark body label{  
-  color: #290202;
-}
-
-.dark body p{  
-  color: #290202;
-}
+.dark div {   
+    background-color: #222;    
+     color: #fff;
+  }
