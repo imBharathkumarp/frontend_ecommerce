@@ -1,11 +1,16 @@
 .cart-icon {
-  position: fixed;
-  top: 50%;
-  right: 0%;
-  padding: 8px;
-  background-color: #3f3b40;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: transparent;
+  color: inherit;
   font-size: 20px;
   text-align: center;
-  z-index: 99999;
+  position: static;
+  box-shadow: none;
+  z-index: auto;
+}
+
+.cart-icon span:first-child {
+  margin-right: 4px;
 }

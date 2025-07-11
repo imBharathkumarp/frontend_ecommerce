@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { fetchAllCategories } from "../../Features/Category/CategorySlice";
+import RightCartIcon from "../Cart/RightCartIcon";
 
 function TopNavbar({ darkMode, toggleMode }) {
   const { categories } = useSelector((state) => state.categories);
@@ -58,6 +59,7 @@ function TopNavbar({ darkMode, toggleMode }) {
         <button className="mode" onClick={toggleMode} style={{ marginLeft: '1rem' }}>
           {darkMode ? '☀️' : '🌙'}
         </button>
+        <RightCartIcon />
       </Container>
     </Navbar>
   );
