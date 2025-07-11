@@ -67,7 +67,7 @@ function CartItemCard({ item }) {
                 <FaPlus />
               </button>
             </div>
-            <div className="w-100 text-center">
+            <div className="w-100 text-center cart-total">
               <span className="fs-5">
                 ₹
                 {product.price

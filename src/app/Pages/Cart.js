@@ -64,15 +64,15 @@ function Cart() {
               <Card.Body>
                 <div className="d-flex justify-content-around">
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-total">
                       Subtotal: ₹{subTotal}
                     </h5>
                   </div>
                   <div className="w-100 ">
-                    <h5 className="align-middle d-inline">Tax(2%): ₹{tax}</h5>
+                    <h5 className="align-middle d-inline cart-total">Tax(2%): ₹{tax}</h5>
                   </div>
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-total">
                       Total Price: ₹{Math.round(totalAmmount)}
                     </h5>
                   </div>

@@ -55,9 +55,27 @@ function TopNavbar({ darkMode, toggleMode }) {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
-        <button className="mode" onClick={toggleMode} style={{ marginLeft: '1rem' }}>
-          {darkMode ? '☀️' : '🌙'}
-        </button>
+        <button
+  className="mode"
+  onClick={toggleMode}
+  style={{
+    marginLeft: '1rem',
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid #ccc',
+    background: darkMode ? '#222' : '#fff',
+    color: darkMode ? '#fff' : '#222',
+    cursor: 'pointer'
+  }}
+>
+  <span style={{ fontSize: '1.4rem' }}>
+    {darkMode ? '☀️' : '🌙'}
+  </span>
+</button>
       </Container>
     </Navbar>
   );

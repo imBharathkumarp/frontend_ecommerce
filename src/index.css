@@ -19,3 +19,6 @@ body {
   background: #222;
   color: #fff;
 }
+html.dark .cart-total {
+  color: #151414 !important;
+}
