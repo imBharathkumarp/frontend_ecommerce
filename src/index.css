@@ -37,6 +37,12 @@ body {
   color: inherit;
 }
 
+/* Dark mode div styles */
+.dark div {   
+    background-color: #222;    
+     color: #fff;
+}
+
 /* Dark mode card styles */
 .dark .card {
   background-color: #333;
