@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import './Login.css'; // Import the CSS file
 // ... (other imports)
 
 // ... (other imports)
@@ -31,7 +31,7 @@ function Login({ setLoginResult }) {
   };
 
   return (
-    <div className="container">
+    <div className="loginContainer">
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <label>Enter Email:</label>
