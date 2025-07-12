@@ -37,3 +37,16 @@ button:hover {
   border: none;
   cursor: pointer;
 }
+
+.showhide {
+  position: relative;
+  background-color: white;
+  
+  button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: black;
+  }
+}
