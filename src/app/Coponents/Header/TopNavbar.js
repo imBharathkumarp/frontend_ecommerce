@@ -13,7 +13,7 @@ function TopNavbar({ darkMode, toggleMode }) {
   }, [dispatch]);
 
   return (
-    <Navbar   bg={darkMode ? "dark" : "light"} variant={darkMode ? "dark" : "light"} expand="lg"  >
+    <Navbar bg={darkMode ? "dark" : "light"} variant={darkMode ? "dark" : "light"} expand="lg">
       <Container>
         <NavLink to={"/"} className={"navbar-brand"}>
           Shop Now
@@ -28,16 +28,13 @@ function TopNavbar({ darkMode, toggleMode }) {
               {categories &&
                 categories.map((c, index) => {
                   return (
-                    <div>
-                    <Link
-                      to={`/category/${c}`}
-                      className="text-capitalize dropdown-item"
-                      key={index}
-                    >
-                      {c}
-                    </Link>
-
-                   
+                    <div key={index}>
+                      <Link
+                        to={`/category/${c}`}
+                        className="text-capitalize dropdown-item"
+                      >
+                        {c}
+                      </Link>
                     </div>
                   );
                 })}

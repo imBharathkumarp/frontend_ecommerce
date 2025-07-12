@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import axios from 'axios';
+import './Contact.css';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -27,19 +28,53 @@ function Contact() {
 
   return (
     <Fragment>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#f0f0f0' }}>
-        <form style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} onSubmit={handlePost}>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
+      <div className="contact-container">
+        <div className="contact-form-wrapper">
+          <h2 className="contact-title">Contact Us</h2>
+          <p className="contact-subtitle">We'd love to hear from you!</p>
+          
+          <form className="contact-form" onSubmit={handlePost}>
+            <div className="form-group">
+              <label htmlFor="name" className="form-label">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                value={name} 
+                onChange={(e) => setName(e.target.value)} 
+                className="form-input"
+                required
+              />
+            </div>
 
-          <label htmlFor="email">Email</label>
-          <input type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: '100%', marginBottom: '10px', padding: '8px' }} />
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                className="form-input"
+                required
+              />
+            </div>
 
-          <label htmlFor="message">Message</label>
-          <input type="text" id="message" value={message} onChange={(e) => setMessage(e.target.value)} style={{ width: '100%', marginBottom: '20px', padding: '8px' }} />
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">Message</label>
+              <textarea 
+                id="message" 
+                value={message} 
+                onChange={(e) => setMessage(e.target.value)} 
+                className="form-textarea"
+                rows="4"
+                required
+              />
+            </div>
 
-          <button type="submit" style={{ backgroundColor: '#007bff', color: '#fff', padding: '10px', borderRadius: '4px', cursor: 'pointer' }}>Submit</button>
-        </form>
+            <button type="submit" className="submit-button">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </Fragment>
   );

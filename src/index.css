@@ -53,3 +53,74 @@ body {
 .dark .card-body {
   background-color: #333;
 }
+
+/* Dark mode dropdown styles */
+.dark .dropdown-menu {
+  background-color: #333;
+  border-color: #555;
+}
+
+.dark .dropdown-item {
+  color: #fff;
+  background-color: #333;
+}
+
+.dark .dropdown-item:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark .dropdown-item:focus {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark .dropdown-item:active {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Dark mode navbar styles */
+.dark .navbar {
+  background-color: #333 !important;
+}
+
+.dark .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.dark .navbar-nav .nav-link:hover {
+  color: #b0b0b0 !important;
+}
+
+.dark .navbar-brand {
+  color: #fff !important;
+}
+
+.dark .navbar-toggler {
+  border-color: #555;
+}
+
+.dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dark mode dropdown toggle styles */
+.dark .dropdown-toggle {
+  color: #fff !important;
+}
+
+.dark .dropdown-toggle:hover {
+  color: #b0b0b0 !important;
+}
+
+.dark .dropdown-toggle:focus {
+  color: #fff !important;
+}
+
+/* Dark mode dropdown menu positioning */
+.dark .dropdown-menu.show {
+  background-color: #333;
+  border: 1px solid #555;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}

@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
+
 function ProductCard({ product }) {
   return (
     <Fragment>
@@ -13,18 +14,19 @@ function ProductCard({ product }) {
         <Card className="custom-card">
           <Card.Img
             variant="top"
-            className="py-3 card-img"
+            className="card-img"
             src={product.image}
+            alt={product.title}
           />
-          <Card.Body className="text-center">
-            <Card.Title className="fs-6">
+          <Card.Body className="card-body">
+            <Card.Title className="card-title">
               {product.title.slice(0, 30)} ...
             </Card.Title>
-            <Card.Text className="text-capitalize text-decoration-none fs-6">
+            <Card.Text className="card-text text-capitalize">
               {product.category}
             </Card.Text>
-            <h5>₹{product.price}</h5>
-            <div className="py-2 d-flex justify-content-center fs-6">
+            <h5 className="card-price">₹{product.price}</h5>
+            <div className="card-rating">
               <ReactStars
                 count={5}
                 value={product.rating.rate}
@@ -33,8 +35,9 @@ function ProductCard({ product }) {
                 halfIcon={<i className="fa fa-star-half-alt"></i>}
                 fullIcon={<i className="fa fa-star"></i>}
                 activeColor="#ffd700"
-              ></ReactStars>
-              {`(${product.rating.count})`}
+                size={16}
+              />
+              <span>({product.rating.count})</span>
             </div>
           </Card.Body>
         </Card>

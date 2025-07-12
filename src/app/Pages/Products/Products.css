@@ -1,0 +1,139 @@
+/* Products pages styles */
+.products-container {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.products-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.products-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.category-name {
+  color: #007bff;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.products-grid {
+  margin: 0 -0.5rem;
+}
+
+.product-col {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Dark mode styles */
+.dark .products-container {
+  background: #1a1a1a;
+}
+
+.dark .products-title {
+  color: #ffffff;
+}
+
+.dark .products-subtitle {
+  color: #b0b0b0;
+}
+
+.dark .category-name {
+  color: #4a9eff;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .products-container {
+    padding: 1.5rem 0;
+  }
+  
+  .products-header {
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+  
+  .products-title {
+    font-size: 2rem;
+  }
+  
+  .products-subtitle {
+    font-size: 1rem;
+  }
+  
+  .product-col {
+    padding: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 1rem 0;
+  }
+  
+  .products-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .products-title {
+    font-size: 1.75rem;
+  }
+  
+  .products-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .product-col {
+    padding: 0.125rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Loading state styles */
+.products-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.dark .products-loading {
+  color: #b0b0b0;
+}
+
+/* Empty state styles */
+.products-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.products-empty h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.dark .products-empty {
+  color: #b0b0b0;
+}
+
+.dark .products-empty h3 {
+  color: #ffffff;
+} 

@@ -47,57 +47,58 @@ function SingleProductDetails() {
 
   return (
     <Fragment>
-
       <Container>
         {product && (
           <Row className="my-5">
             <Col md={6} sm={12}>
               <div className="img-container p-3">
-                <Image className="single-img" src={product.image} />
+                <Image className="single-img" src={product.image} alt={product.title} />
               </div>
             </Col>
             <Col md={6} sm={12}>
-              <div className="px-4">
-                <h2>{product.title}</h2>
-                <h4 className="py-2 fs-5">
+              <div className="product-details-container px-4">
+                <h2 className="product-title">{product.title}</h2>
+                <h4 className="product-category">
                   Category:{" "}
-                  <Link
-                    to={`/category/${product.category}`}
-                    className="text-capitalize text-decoration-none"
-                  >
+                  <Link to={`/category/${product.category}`}>
                     {product.category}
                   </Link>
                 </h4>
-                <h4 className="py-2">Price: ₹{product.price}</h4>
-                <p>{product.description}</p>
-                <div className="d-flex mb-3">
+                <h4 className="product-price">Price: ₹{product.price}</h4>
+                <p className="product-description">{product.description}</p>
+                
+                <div className="quantity-controls">
                   <button
-                    className="btn btn-sm btn-dark fs-6 me-3 text-center"
+                    className="quantity-btn"
                     onClick={decreaseQunaity}
+                    aria-label="Decrease quantity"
                   >
                     <FaMinus />
                   </button>
                   <input
                     type="number"
-                    className="form-control text-center w-auto p-0 m-0"
+                    className="quantity-input"
                     value={quantity}
                     readOnly={true}
                     required={true}
+                    aria-label="Product quantity"
                   />
                   <button
-                    className="btn btn-sm btn-dark fs-6 ms-3 text-center"
+                    className="quantity-btn"
                     onClick={increaseQunaity}
+                    aria-label="Increase quantity"
                   >
                     <FaPlus />
                   </button>
                 </div>
-                <div className="">
-                  <Button variant="dark" className="me-2">
+                
+                <div className="action-buttons">
+                  <Button variant="dark" className="action-btn btn-primary">
                     Buy Now
                   </Button>
                   <Button
                     variant="secondary"
-                    className="ms-2"
+                    className="action-btn btn-secondary"
                     onClick={addToCart}
                   >
                     Add To Cart
