@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Signup.css'; // Import the CSS file
+import { FaRegEye } from "react-icons/fa"
+import { FaRegEyeSlash } from "react-icons/fa";
 
 function Signup({ setIsLogin, setLoginResult }) {
   const [fname, setFname] = useState("");
@@ -10,6 +12,12 @@ function Signup({ setIsLogin, setLoginResult }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleShowHidePassword = (e) => {
+    e.preventDefault();
+    setIsHidden(!isHidden)
+  }
 
   const handleSignup = () => {
     axios.post('http://localhost:5000/register', { fname, lname, dob, email, password, phone })
@@ -72,14 +80,19 @@ function Signup({ setIsLogin, setLoginResult }) {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group  showhide">
           <label>Password:</label>
-          <input
-            type="text"
+          <input            
+            type={isHidden ? "password" : "text"}
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+           <button onClick={handleShowHidePassword}>
+            {
+              isHidden ? <FaRegEye /> : <FaRegEyeSlash />
+            }
+            </button>
         </div>
         <div className="form-group">
           <label>Phone Number:</label>
