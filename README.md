@@ -4,8 +4,21 @@
 <p align="center">
   <a href="https://fatafats.vercel.app/"><strong>🚀 Live Demo</strong></a>
 </p>
+<details>
+  <summary>📚 Table of Contents (Click to expand)</summary>
 
----
+- [📌 Overview](#-overview)
+- [🛠 Tech Stack](#-tech-stack)
+- [✨ Features](#-features)
+- [🤝 Contributing](#-contributing)
+  - [🛠️ Project Setup](#️-project-setup)
+  - [📋 How to Contribute](#-how-to-contribute)
+  - [✍️ Coding Guidelines](#-coding-guidelines)
+- [🙌 Need Help?](#-need-help)
+- [⭐ Support This Project](#-support-this-project)
+
+</details>
+
 
 ## 📌 Overview
 
