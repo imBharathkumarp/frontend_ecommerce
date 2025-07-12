@@ -8,6 +8,25 @@
   margin-bottom: 15px;
 }
 
+/* added visible toggle css  */
+.visible {
+  position: relative;
+  background-color: white;
+  color: rgb(122, 97, 97);
+
+  button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: black;
+  }
+}
+
+.visible button:hover {
+    background-color: transparent;
+}
+
 label {
   display: block;
   margin-bottom: 5px;
