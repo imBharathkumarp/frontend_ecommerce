@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500&display=swap");
+
+/* Base body styles */
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
@@ -6,16 +8,42 @@ body {
   -moz-osx-font-smoothing: sans-serif;
 }
 
+/* Code font styles */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Light mode styles */
 body {
   background: #fff;
   color: #222;
 }
 
+/* Dark mode styles for body */
 .dark body {
   background: #222;
   color: #fff;
+}
+
+/* Additional dark mode styles */
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+/* Inherit color for all elements in dark mode */
+.dark * {
+  color: inherit;
+}
+
+/* Dark mode card styles */
+.dark .card {
+  background-color: #333;
+  border-color: #555;
+}
+
+/* Dark mode card body styles */
+.dark .card-body {
+  background-color: #333;
 }

@@ -47,7 +47,7 @@ function CartItemCard({ item }) {
             <div className="w-100">
               <Link
                 to={`/product/${product.id}`}
-                className="text-dark text-decoration-none fs-5"
+                className="text-dark text-decoration-none fs-5 cart-item-link"
               >
                 {product.title ? product.title.slice(0, 20) : ""}...
               </Link>
@@ -59,7 +59,7 @@ function CartItemCard({ item }) {
               >
                 <FaMinus />
               </button>
-              <span className="fs-4">{product.quantity}</span>
+              <span className="fs-4 cart-item-quantity">{product.quantity}</span>
               <button
                 className="btn btn-sm btn-dark fs-6 ms-3 text-center"
                 onClick={increaseItemQuantity}
@@ -68,7 +68,7 @@ function CartItemCard({ item }) {
               </button>
             </div>
             <div className="w-100 text-center">
-              <span className="fs-5">
+              <span className="fs-5 cart-item-price">
                 ₹
                 {product.price
                   ? (product.price * product.quantity).toFixed(2)
