@@ -11,6 +11,7 @@ import {
 } from "../Features/Cart/CartSelector";
 import { cartState } from "../Features/Cart/CartSlice";
 import axios from "axios";
+import "./Cart.css";
 
 function Cart() {
   let state = useSelector((state) => state);
@@ -64,15 +65,15 @@ function Cart() {
               <Card.Body>
                 <div className="d-flex justify-content-around">
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-value">
                       Subtotal: ₹{subTotal}
                     </h5>
                   </div>
                   <div className="w-100 ">
-                    <h5 className="align-middle d-inline">Tax(2%): ₹{tax}</h5>
+                    <h5 className="align-middle d-inline cart-value">Tax(2%): ₹{tax}</h5>
                   </div>
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-value">
                       Total Price: ₹{Math.round(totalAmmount)}
                     </h5>
                   </div>

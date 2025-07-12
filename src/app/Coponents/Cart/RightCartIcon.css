@@ -1,11 +1,35 @@
+/* Cart icon container styles */
 .cart-icon {
-  position: fixed;
-  top: 50%;
-  right: 0%;
-  padding: 8px;
-  background-color: #3f3b40;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: transparent;
+  color: inherit;
   font-size: 20px;
   text-align: center;
-  z-index: 99999;
+  position: static;
+  box-shadow: none;
+  z-index: auto;
+}
+
+/* Spacing between cart icon and counter */
+.cart-icon span:first-child {
+  margin-right: 4px;
+}
+
+/* Cart item counter styles */
+.cart-count {
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+}
+
+/* Dark mode styles for cart icon */
+.dark .cart-icon {
+  color: #fff;
+}
+
+/* Dark mode styles for cart counter */
+.dark .cart-count {
+  color: #fff;
 }

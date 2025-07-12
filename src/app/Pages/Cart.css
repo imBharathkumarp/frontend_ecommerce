@@ -1,0 +1,34 @@
+/* Cart values styles for light and dark modes */
+.cart-value {
+  color: inherit;
+}
+
+/* Dark mode styles for cart values (subtotal, tax, total) */
+.dark .cart-value {
+  color: #fff !important;
+}
+
+/* Dark mode styles for "Go for shopping" link */
+.dark .text-dark {
+  color: #fff !important;
+}
+
+/* Dark mode styles for error messages */
+.dark .text-danger {
+  color: #ff6b6b !important;
+}
+
+/* Dark mode styles for cart item links */
+.dark .cart-item-link {
+  color: #fff !important;
+}
+
+/* Dark mode styles for cart item quantity */
+.dark .cart-item-quantity {
+  color: #fff !important;
+}
+
+/* Dark mode styles for cart item price */
+.dark .cart-item-price {
+  color: #fff !important;
+} 

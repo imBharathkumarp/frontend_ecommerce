@@ -8,6 +8,7 @@ import { subTotalPrice, totalPrice, totalTax } from "../Features/Cart/CartSelect
 import { cartState } from "../Features/Cart/CartSlice";
 import { useAuth0 } from '@auth0/auth0-react'; 
 import axios from 'axios';
+import "../../Pages/Cart.css";
 
 function Cart() {
   let state = useSelector((state) => state);
@@ -64,15 +65,15 @@ function Cart() {
               <Card.Body>
                 <div className="d-flex justify-content-around">
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-value">
                       Subtotal: ${subTotal}
                     </h5>
                   </div>
                   <div className="w-100 ">
-                    <h5 className="align-middle d-inline">Tax(2%): ${tax}</h5>
+                    <h5 className="align-middle d-inline cart-value">Tax(2%): ${tax}</h5>
                   </div>
                   <div className="w-100 align-middle">
-                    <h5 className="align-middle d-inline">
+                    <h5 className="align-middle d-inline cart-value">
                       Total Price: ${totalAmmount.toFixed(2)}
                     </h5>
                   </div>
