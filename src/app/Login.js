@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Login.css'; // Import the CSS file
+import { FaRegEye } from "react-icons/fa"
+import { FaRegEyeSlash } from "react-icons/fa";
 // ... (other imports)
 
 // ... (other imports)
@@ -9,6 +11,12 @@ import './Login.css'; // Import the CSS file
 function Login({ setLoginResult }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleShowHidePassword = (e) => {
+    e.preventDefault();
+    setIsHidden(!isHidden)
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent default form submission
@@ -41,13 +49,20 @@ function Login({ setLoginResult }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        <div className="form-group  showhide">
         <label>Enter Password:</label>
         <input
-          type="password"
+          type={isHidden ? "password" : "text"}
           placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+         <button onClick={handleShowHidePassword}>
+            {
+              isHidden ? <FaRegEye /> : <FaRegEyeSlash />
+            }
+            </button>
+        </div>
         <button type="submit">Login</button>
       </form>
       <p>
