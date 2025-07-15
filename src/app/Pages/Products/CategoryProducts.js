@@ -18,7 +18,7 @@ function CategoryProducts() {
       <Container>
         <div className="my-4">
           <h4 className="mb-4">
-            Produdcts from -{" "}
+            Products from -{" "}
             <span className="text-capitalize">{categoryName}</span>
           </h4>
           <Row>
