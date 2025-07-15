@@ -10,7 +10,7 @@ function AllProducts() {
     <Fragment>
       
       <Container>
-        <h4 className="mb-4">Showing Produdcts from</h4>
+        <h4 className="mb-4">Showing Products from</h4>
         <Row>
           {products &&
             products.map((p) => {
