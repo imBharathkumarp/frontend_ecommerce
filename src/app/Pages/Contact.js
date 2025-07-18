@@ -37,7 +37,7 @@ function Contact() {
           <input type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="inputEmail" />
 
           <label htmlFor="message">Message</label>
-          <input type="text" id="message" value={message} onChange={(e) => setMessage(e.target.value)} className="inputMessaage" />
+          <input type="textarea" style={{height:"350px"}} id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
 
           <button type="submit" className="submitButton">Submit</button>
         </form>
