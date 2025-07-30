@@ -16,7 +16,7 @@ function TopNavbar({ darkMode, toggleMode }) {
     <Navbar   bg={darkMode ? "dark" : "light"} variant={darkMode ? "dark" : "light"} expand="lg"  >
       <Container>
         <NavLink to={"/"} className={"navbar-brand"}>
-          Shop Now
+          FATAFAT E-COMMERCE
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -36,8 +36,6 @@ function TopNavbar({ darkMode, toggleMode }) {
                     >
                       {c}
                     </Link>
-
-                   
                     </div>
                   );
                 })}
