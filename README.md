@@ -135,3 +135,5 @@ Your support motivates us to keep improving and building great features. Thank y
 With gratitude,
 
 The Fatafat Team 💙
+
+---
