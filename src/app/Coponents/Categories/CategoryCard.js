@@ -10,7 +10,7 @@ function CategoryCard({ category }) {
     >
       <Card className="custom-card">
         <Card.Body>
-          <Card.Text className="text-capitalize">{category}</Card.Text>
+          <Card.Text className="text-black text-capitalize">{category}</Card.Text>
         </Card.Body>
       </Card>
     </Link>
